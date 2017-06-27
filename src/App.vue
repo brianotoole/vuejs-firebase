@@ -29,9 +29,10 @@
 
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3>Lists</h3>
+        <h3>Submissions</h3>
       </div><!--/.panel-heading-->
       <div class="panel-body">
+        <h1 v-if="loading">loading...</h1>
         <div class="row" v-for="book in books">
           <div class="col-sm-4">
             <h5>Title</h5>
@@ -74,7 +75,6 @@ let config = {
 let app = Firebase.initializeApp(config);
 let db = app.database();
 let bookRef = db.ref('books'); // data stored inside "books" node inside firebase
-
 export default {
   name: 'app',
   firebase: {
@@ -82,6 +82,7 @@ export default {
   },
   data() {
     return {
+      loading: false,
       newBook: {
         title: '',
         author: '',
