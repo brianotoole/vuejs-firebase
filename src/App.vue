@@ -96,6 +96,7 @@ export default {
       this.newBook.title = '';
       this.newBook.author = '';
       this.newBook.url = '';
+      toastr.success("Item Added.");
     },
     removeBook: function(book) {
       bookRef.child(book['.key']).remove();
