@@ -60,6 +60,8 @@
 //import Hello from './components/Hello'
 import Firebase from 'firebase'
 
+import toastr from 'toastr'
+
 let config = {
   apiKey: "AIzaSyBeREG-CJqyP4tdKsIHWqc3OloF525ShGA",
   authDomain: "vuejs-aab87.firebaseapp.com",
@@ -97,6 +99,7 @@ export default {
     },
     removeBook: function(book) {
       bookRef.child(book['.key']).remove();
+      toastr.success("Item removed.");
     }
   }
 }
