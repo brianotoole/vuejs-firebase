@@ -35,6 +35,7 @@
         <div class="row" v-for="book in books">
           <div class="col-sm-4">
             <h5>Title</h5>
+            <span class="glyphicon glyphicon-trash" v-on:click="removeBook(book)"></span>
             <li>{{book.title}}</li>
           </div><!--/.col-->
           <div class="col-sm-4">
@@ -93,6 +94,9 @@ export default {
       this.newBook.title = '';
       this.newBook.author = '';
       this.newBook.url = '';
+    },
+    removeBook: function(book) {
+      bookRef.child(book['.key']).remove();
     }
   }
 }
