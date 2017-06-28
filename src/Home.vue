@@ -1,6 +1,5 @@
 <template>
   <div id="app" class="container">
-    <router-view></router-view>
     <div class="page-header">
       <h1>Vue.js &amp; Firebase app</h1>
     </div><!--/.page-header-->

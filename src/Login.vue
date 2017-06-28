@@ -1,6 +1,26 @@
 <template>
-<div>
-</div>
+  <div id="app" class="container">
+
+    <div class="page-header">
+      <h1>Login</h1>
+    </div><!--/.page-header-->
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <form id="form" class="form-block">
+          <div class="form-group">
+            <label for="userName">Username:</label>
+            <input type="text" id="userName" class="form-control" value="">
+          </div><!--/.form-group-->
+          <div class="form-group">
+            <label for="userPass">Password:</label>
+            <input type="text" id="userPass" class="form-control" value="">
+          </div><!--/.form-group-->
+          <input type="submit" class="btn btn-primary pull-right" value="Login">
+        </form><!--/#form-->
+      </div><!--/.panel-body-->
+    </div><!--/.panel-->
+
+  </div><!--/#app-->
 </template>
 
 <script>
@@ -16,21 +36,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
 </style>
